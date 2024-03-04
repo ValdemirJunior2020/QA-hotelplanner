@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Organizer</title>
+    
+    <!-- Add the following line with the path to your favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #links {
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Link Organizer</h1>
+    
+    <form id="passwordForm">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" required>
+        <button type="button" onclick="checkPassword()">Submit</button>
+    </form>
+
+    <div id="links" style="display:none;">
+        <!-- Your links go here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
