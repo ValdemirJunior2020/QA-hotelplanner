@@ -7,35 +7,76 @@
     
     <!-- Add the following line with the path to your favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-    
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 255, 255);
+        }
+
         body {
+            min-height: 100vh;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
+            justify-content: center;            
         }
-
+    
         #links {
             text-align: center;
             margin-top: 20px; /* Adjust as needed */
         }
+
+        .card-img {
+            max-width: 50%;
+            height: auto;
+            max-height: 200px; /* Adjust the maximum height as needed */
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Your Link Organizer</h1>
-    
-    <form id="passwordForm">
-        <label for="password">Enter Password:</label>
-        <input type="password" id="password" required>
-        <button type="button" onclick="checkPassword()">Submit</button>
-    </form>
 
-    <div id="links" style="display:none;">
-        <!-- Your links go here -->
+    <div class="container text-center mt-4">
+        <img src="logo.png" class="card-img mb-4" alt="Card Image">
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Feedback and Reviews for Call Centers</h2>
+
+                <div id="links" style="display:none;">
+                    <!-- Your links go here -->
+                </div>
+
+                <form id="passwordForm" class="mt-4">
+                    <label for="password">Enter Password:</label>
+                    <input type="password" id="password" class="form-control mb-2" required>
+                    <button type="button" onclick="checkPassword()" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 HotelPlanner Q&A Management 
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script src="script.js"></script>
 </body>
